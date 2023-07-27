@@ -1,5 +1,3 @@
-You're absolutely right, I apologize for the oversight. Here is the revised README including information about `generateTransactionWithScreen` and `checkTransaction`:
-
 # Flutter Pix Pagstar Package
 
 This is a Flutter package created by the company Pagstar to facilitate the creation of Pix transactions. This package follows an MVC architecture with the repository pattern and uses the maximum of Flutter's native resources with a minimum amount of external packages to avoid excessive dependencies.
