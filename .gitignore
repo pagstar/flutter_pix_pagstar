@@ -1,0 +1,56 @@
+# Miscellaneous
+*.lock
+*.DS_Store
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+.dart_tool/
+.packages
+.pub-cache/
+pubspec.lock
+
+# Android related
+**/android/**/gradle-wrapper.jar
+**/android/.gradle
+**/android/captures/
+**/android/gradlew
+**/android/gradlew.bat
+**/android/local.properties
+**/android/**/GeneratedPluginRegistrant.java
+
+# iOS/Xcode related
+**/ios/.pub-cache/
+**/ios/Pods/
+**/ios/.generated/
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/flutter_export_environment.sh
+**/ios/Flutter/.last_build_id
+**/ios/Flutter/Generated.xcconfig
+**/ios/.symlinks/
+**/ios/Runner.xcworkspace
+!**/ios/Runner.xcworkspace/contents.xcworkspacedata
+**/*.mode1v3
+**/*.mode2v3
+**/*.moved-aside
+**/*.pbxuser
+**/*.perspectivev3
+**/*.xcuserstate
+**/xcuserdata/
+
+# MacOS related
+**/macos/Flutter/ephemeral/flutter_export_environment.sh
+**/macos/Flutter/ephemeral/Flutter-Generated.xcconfig
+
+# Exceptions to above rules.
+!**/ios/**/default.profraw
+!**/lib/main.dart
+!**/lib/src/** 
+!**/test/**
+
+
