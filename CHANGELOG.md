@@ -1,3 +1,6 @@
+## 1.0.1
+- License and README updates
+
 ## 1.0.0
 
 - Initial implementation of the `flutter_pix_pagstar` package.
