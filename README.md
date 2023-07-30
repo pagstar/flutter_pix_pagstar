@@ -1,6 +1,12 @@
+Certainly! Here's the updated README with the necessary instructions:
+
 # Flutter Pix Pagstar Package
 
 This is a Flutter package created by the company Pagstar to facilitate the creation of Pix transactions. This package follows an MVC architecture with the repository pattern and uses the maximum of Flutter's native resources with a minimum amount of external packages to avoid excessive dependencies.
+
+## Prerequisites
+
+Before you can use this package, you must first request access to the Pagstar sandbox environment to obtain the required credentials (`authorizationToken` and `tenantId`). You can do this by completing the registration at [Pagstar Sandbox](https://pagstar.gitbook.io/api-docs/welcome/sandbox). After completing the registration, you'll receive the necessary credentials to initialize the package.
 
 ## Installation
 
@@ -94,6 +100,12 @@ FlutterPixPagstar.checkTransaction('external_reference');
 ## Error handling
 
 If an unexpected error occurs during a request or on the package page, a generic screen with the error message will be displayed.
+
+Certainly! Here's an additional section that outlines the planned changes for the package regarding greater decoupling of the design for better customization:
+
+## Planned Changes
+
+We are continuously working to improve the Flutter Pix Pagstar Package, and one of our primary goals for future updates is to achieve a higher level of decoupling in the design components. This change aims to allow developers greater flexibility in personalizing the package's appearance and behavior.
 
 ## Support
 

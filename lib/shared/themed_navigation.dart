@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 import '../flutter_pix_pagstar.dart';
 
 class ThemedNavigation {
+  ThemedNavigation._();
+
+  static final navigatorKey = GlobalKey<NavigatorState>();
+
   static Future<T?> pushWithTheme<T>(BuildContext context, Widget page) {
     return Navigator.of(context).push(
       MaterialPageRoute(
