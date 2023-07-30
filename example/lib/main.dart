@@ -4,8 +4,8 @@ import 'package:flutter_pix_pagstar/flutter_pix_pagstar.dart';
 void main() {
   //TODO: input your credentials
   FlutterPixPagstar.init(
-    authorizationToken: '622779|19IpjXAE0p1kMYYeGoeZKur5N8xFMQpzq6IKusRb',
-    tenant: 'fedaac64-92f9-4a2a-b91e-007d6081f469',
+    authorizationToken: 'your_authorization_token',
+    tenant: 'your_tenant_id',
   );
   //PixPagstar.setTheme(ThemeData.dark());
   runApp(const MyApp());

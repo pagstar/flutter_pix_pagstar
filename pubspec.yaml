@@ -1,7 +1,7 @@
 name: flutter_pix_pagstar
-description: A Flutter package for interacting with Pagstar Pix API..
-version: 0.0.1
-homepage:
+description: A Flutter package for interacting with the Pagstar Pix API
+version: 1.0.0
+repository: https://github.com/pagstar/flutter_pix_pagstar
 
 environment:
   sdk: '>=3.0.3 <4.0.0'

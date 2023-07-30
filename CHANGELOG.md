@@ -1,4 +1,4 @@
-## 0.0.1
+## 1.0.0
 
 - Initial implementation of the `flutter_pix_pagstar` package.
 - `init` function to initialize the package configuration.
