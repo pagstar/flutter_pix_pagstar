@@ -29,6 +29,7 @@ class SuccessPage extends StatelessWidget {
               child: TextButton(
                 onPressed: () {
                   Navigator.pop(context, true);
+                  Navigator.pop(context, true);
                 },
                 child: Text(
                   buttonText,

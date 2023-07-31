@@ -1,3 +1,7 @@
+## 1.0.2
+- Package description and README updates
+- Success page navigation fix
+
 ## 1.0.1
 - License and README updates
 

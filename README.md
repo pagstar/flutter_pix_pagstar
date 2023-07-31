@@ -12,17 +12,17 @@ To install the package, add the following line to your project's `pubspec.yaml`:
 
 ```yaml
 dependencies:
-   flutter_pix_pagstar: ^0.0.1
+   flutter_pix_pagstar: ^1.0.2
 ```
 
 After that run `flutter pub get` to get the package.
 
 ## Usage
 
-Before using the package, it is necessary to initialize it with the `init()` function. This function takes two strings, `authorization` and `tenantId`, which are used for API requests.
+Before using the package, it is necessary to initialize it with the `init()` function. This function takes two named parameters, `authorizationToken` and `tenant`, which are used for API requests.
 
 ```dart
-FlutterPixPagstar.init('your_authorization_token', 'your_tenant_id');
+FlutterPixPagstar.init(authorizationToken: 'your_authorization_token', tenant: 'your_tenant_id');
 ```
 
 ### Change Theme
@@ -33,73 +33,74 @@ To customize the appearance of the package, you can use the `setTheme()` functio
 FlutterPixPagstar.setTheme(ThemeData.dark());
 ```
 
-### Generate Transaction Without Screen
+### Generate Transaction
 
-To generate a transaction without returning a screen, you must call the `generateTransaction()` function. It receives a `PixTransactionModel` model (the name and document are optional to create a transaction, if you do not pass those arguments, an anonymous transaction will be created).
+To generate a transaction without returning a screen, you can use the `generateTransaction()` function. It receives a `PixTransactionModel` model (the name and document are optional to create a transaction, if you do not pass those arguments, an anonymous transaction will be created).
 
 ```dart
-FlutterPixPagstar.generateTransaction(
-   PixTransactionModel(
-     value: 100,
-     tenantId: 'your_tenant_id',
-     name: 'your_name',
-     document: 'your_document',
-     expiration: 600,
-   ),
-);
+FlutterPixPagstar.generateTransaction(model: PixTransactionModel(
+  value: 100,
+  tenantId: 'your_tenant_id',
+  name: 'your_name',
+  document: 'your_document',
+  expiration: 600,
+));
+```
+
+### Check Transaction
+
+To check the status of a transaction, use the `checkTransaction()` function. This function takes a named parameter `externalReference`, which is the identifier of the transaction you want to check.
+
+```dart
+FlutterPixPagstar.checkTransaction(externalReference: 'external_reference');
 ```
 
 ### Generate Transaction With Screen
 
-If you need to generate a transaction and also present a screen, you can use the `generateTransactionWithScreen()` function. This function also accepts several parameters for customizing the transaction screen including `title`, `subtitle`, `cancelButtonLabel`, `successMessage`, and `returnButtonLabel`.
+If you need to generate a transaction and also present a screen, you can use the `generateTransactionWithScreen()` function. This function takes named parameters for customization, including `title`, `subtitle`, `cancelButtonLabel`, `successMessage`, and `returnButtonLabel`.
 
 ```dart
 FlutterPixPagstar.generateTransactionWithScreen(
-   context,
-   PixTransactionModel(
+   context: context,
+   model: PixTransactionModel(
      value: 100,
      tenantId: 'your_tenant_id',
      name: 'your_name',
      document: 'your_document',
      expiration: 600,
    ),
-   'Title',
-   'Button Label',
-   'Feedback text',
-   'Subtitle',
-   'Cancel Button Label',
-   'Success Message',
-   'Return Button Label',
+   title: 'Title',
+   buttonLabel: 'Button Label',
+   feedbackText: 'Feedback text',
+   subtitle: 'Subtitle',
+   cancelButtonLabel: 'Cancel Button Label',
+   successMessage: 'Success Message',
+   returnButtonLabel: 'Return Button Label',
 );
 ```
 
 ### Select Value Page
 
-You can also open a page for the user to select the amount of a transaction. To do so, use the `selectValuePage()` function, which receives the strings `headerText`, `transactionTitle`, `transactionButtonLabel` and `feedbackText`.
+You can also open a page for the user to select the amount of a transaction. To do so, use the `selectValuePage()` function, which takes named parameters like `headerText`, `transactionTitle`, `transactionButtonLabel`, and `feedbackText`.
 
 ```dart
 FlutterPixPagstar.selectValuePage(
-   context,
-   'Header',
-   'Transaction Title',
-   'Transaction Button Label',
-   'Feedback Text',
+   context: context,
+   headerText: 'Header',
+   buttonText: 'Transaction Button',
+   subtitleText: 'Subtitle',
+   transactionTitle: 'Transaction Title',
+   transactionButtonLabel: 'Transaction Button Label',
+   feedbackText: 'Feedback Text',
+   cancelButtonLabel: 'Cancel Button Label',
+   successMessage: 'Success Message',
+   returnButtonLabel: 'Return Button Label',
 );
-```
-
-### Check Transaction
-
-To check the status of a transaction, use the `checkTransaction()` function. This function takes a string `externalReference` which is the identifier of the transaction you want to check.
-
-```dart
-FlutterPixPagstar.checkTransaction('external_reference');
 ```
 
 ## Error handling
 
 If an unexpected error occurs during a request or on the package page, a generic screen with the error message will be displayed.
-
-Certainly! Here's an additional section that outlines the planned changes for the package regarding greater decoupling of the design for better customization:
 
 ## Planned Changes
 
