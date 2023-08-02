@@ -1,3 +1,6 @@
+## 1.0.3
+- Added public repository to package description
+
 ## 1.0.2
 - Package description and README updates
 - Success page navigation fix

@@ -1,6 +1,6 @@
 name: flutter_pix_pagstar
 description: A package by Pagstar to facilitate Pix transactions with QR Code or random key, featuring customizable design.
-version: 1.0.2
+version: 1.0.3
 repository: https://github.com/pagstar/flutter_pix_pagstar
 
 environment:
